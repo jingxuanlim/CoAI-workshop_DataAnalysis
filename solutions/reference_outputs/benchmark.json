@@ -1,0 +1,22 @@
+{
+  "condition_only": {
+    "genes_called": 116,
+    "true_positives": 112,
+    "false_positives": 4,
+    "true_genes_total": 200,
+    "recall": 0.56,
+    "precision": 0.9655,
+    "direction_agreement": 1.0,
+    "effect_size_correlation": 0.9819
+  },
+  "condition_and_batch": {
+    "genes_called": 138,
+    "true_positives": 133,
+    "false_positives": 5,
+    "true_genes_total": 200,
+    "recall": 0.665,
+    "precision": 0.9638,
+    "direction_agreement": 1.0,
+    "effect_size_correlation": 0.9819
+  }
+}

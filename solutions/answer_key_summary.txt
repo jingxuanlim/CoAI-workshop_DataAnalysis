@@ -1,0 +1,23 @@
+Composition of the synthetic dataset
+========================================
+
+Seed: 20260818
+Genes: 4200
+Samples: 16 (8 per condition)
+Batches: A and B, balanced within each condition
+
+Differentially expressed genes: 200
+  increased in treated: 120
+  decreased in treated: 80
+  absolute log2 fold change between 0.8 and 3.0
+  90 of them use recognizable real gene symbols
+  and were given the larger effect sizes on purpose
+
+Gene sets containing an excess of differential genes:
+  INFLAMMATORY_RESPONSE: 26 of 43 members
+  TNFA_SIGNALING_VIA_NFKB: 32 of 57 members
+  HYPOXIA: 31 of 97 members
+  DNA_REPAIR: 31 of 116 members
+
+Batch effect: per-gene log2 shift, standard deviation 0.80,
+applied to batch B, plus a 12 per cent reduction in depth.

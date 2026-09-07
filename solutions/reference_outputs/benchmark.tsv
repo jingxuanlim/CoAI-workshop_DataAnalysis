@@ -1,0 +1,3 @@
+model	genes_called	true_positives	false_positives	true_genes_total	recall	precision	direction_agreement	effect_size_correlation
+condition only	116	112	4	200	0.56	0.9655	1.0	0.9819
+condition and batch	138	133	5	200	0.665	0.9638	1.0	0.9819

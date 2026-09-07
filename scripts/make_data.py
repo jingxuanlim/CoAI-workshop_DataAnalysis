@@ -48,7 +48,7 @@ DATA = ROOT / "data"
 SOLUTIONS = ROOT / "solutions"
 
 # Real human gene symbols. They are used for the differentially expressed genes
-# so that the biological-claim exercise in Block 3 has recognizable material to
+# so that the biological-claim exercise in Exercise 02 has recognizable material to
 # work with. Their expression pattern in this dataset is assigned at random and
 # has no relationship to their real biology.
 NAMED_GENES = """
@@ -208,7 +208,7 @@ def main():
     # Roughly half of the differential genes are taken from the list of real
     # human gene symbols, and they are given the larger effect sizes. This puts
     # recognizable symbols at the top of the results table, which is what the
-    # biological-claim exercise in Block 3 needs. Their behavior here is
+    # biological-claim exercise in Exercise 02 needs. Their behavior here is
     # assigned by this script and has nothing to do with their real biology.
     symbol_array = genes["gene_symbol"].to_numpy()
     is_named = np.isin(symbol_array, NAMED_GENES)

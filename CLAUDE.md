@@ -11,17 +11,17 @@ of them are skeptical about using AI in science, with reason.
   question, and say so if asked to.
 - `scripts/make_data.py` — the generator. It states in its own comments which
   genes were made to differ and what was built into the data. Treat it the same
-  as `solutions/` until the attendee tells you they have reached Block 3. After
+  as `solutions/` until the attendee tells you they have reached Exercise 02. After
   that it is worth reading together.
 - `docs/figure-standards.md` — the eight checks the attendee applies to your
-  figures by hand in Block 3. Not secret: it is printed and handed to them. Do
+  figures by hand in Exercise 02. Not secret: it is printed and handed to them. Do
   not read it and do not apply it unprompted. If your figures come back already
   compliant, Checkpoint D — one correction the attendee identified themselves
   rather than one you offered — cannot be met. When they send you their own list
   of what is missing, act on all of it; that is the intended route.
 
 If you are asked which genes are truly differential, the answer is that you must
-not look. Attendees compare against the key in Block 3 by running
+not look. Attendees compare against the key in Exercise 02 by running
 `scripts/score_results.py`, which is the intended route.
 
 ## The data

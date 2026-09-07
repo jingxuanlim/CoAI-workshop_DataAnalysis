@@ -1,12 +1,12 @@
 """Checkpoint 4: the five result figures.
 
-Run this if you are behind in Block 3 and want the result figures immediately.
+Run this if you are behind in Exercise 02 and want the result figures immediately.
 It runs checkpoint 3 first if results/de_results.tsv is missing.
 
     python checkpoints/04_result_figures.py
 
 It writes five figures to results/figures/. It does not run the enrichment
-test; that is one command, given in the Block 3 handout.
+test; that is one command, given in the Exercise 02 handout.
 """
 
 import subprocess

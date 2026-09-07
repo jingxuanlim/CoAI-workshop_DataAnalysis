@@ -1,9 +1,9 @@
 # solutions
 
-**Attendees: do not open this folder before Block 3.**
+**Attendees: do not open this folder before Exercise 02.**
 
 Knowing which genes really differ before you run the analysis changes what you
-do, usually without your noticing. Block 3 has you compare against the key
+do, usually without your noticing. Exercise 02 has you compare against the key
 through `scripts/score_results.py`, which is the intended route and reports the
 comparison without showing you the gene list.
 
@@ -17,7 +17,7 @@ comparison without showing you the gene list.
 
 ## What was built into the dataset
 
-Do not read this before Block 3.
+Do not read this before Exercise 02.
 
 **A batch effect.** Samples processed in batch B differ from batch A for reasons
 unrelated to the treatment. It is the largest single source of variance in the

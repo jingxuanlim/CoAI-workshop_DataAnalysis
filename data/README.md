@@ -17,11 +17,11 @@ and four treated in each, so batch is not confounded with condition.
 ## Features you are expected to find
 
 This dataset was built with specific properties that the exploration step in
-Block 2 is designed to reveal. They are not listed here on purpose. Finding them
+Exercise 01 is designed to reveal. They are not listed here on purpose. Finding them
 is the exercise.
 
 They are documented in `solutions/`, together with the answer key. Do not open
-that folder before Block 3.
+that folder before Exercise 02.
 
 If you ask Claude Code to explore the data, it will find them, which is the
 intended route.
@@ -42,7 +42,7 @@ in them was assembled for this exercise. It does not reproduce MSigDB, GO,
 Reactome or any other database. The second field of every line in the file says
 so; open it and look.
 
-Both of these are there for the exercise in Block 3, where you ask a model to
+Both of these are there for the exercise in Exercise 02, where you ask a model to
 interpret the result biologically and then work out which parts of its answer
 came from your data and which came from what it already knew about these names.
 

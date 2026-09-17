@@ -91,7 +91,7 @@ rule make_gentrome:
 rule make_tx2gene:
     input:  fa=f"{REF_DIR}/transcriptome.fa.gz"
     output: tsv=f"{REF_DIR}/tx2gene.tsv"
-    script: "workflow/make_tx2gene_once_cc.py"
+    script: "agents/sessions/20260917-135124_cc/scripts/make_tx2gene_once_cc.py"
 
 
 rule salmon_index:
@@ -276,7 +276,7 @@ rule collate:
         quant=SALMON_DIRS,
         tx2gene=f"{REF_DIR}/tx2gene.tsv",
     output: tsv=f"{RESULTS}/counts_matrix.tsv"
-    script: "workflow/collate_counts_once_cc.py"
+    script: "agents/sessions/20260917-135124_cc/scripts/collate_counts_once_cc.py"
 
 
 # ── MultiQC ───────────────────────────────────────────────────────────────────

@@ -1,0 +1,37 @@
+results_dir: "results"
+resources_dir: "resources"
+reference_version: "ensembl_112_dmelanogaster"
+
+# Zenodo record 6457007 — Galaxy Training RNA-seq tutorial (Pasilla dataset,
+# D. melanogaster). GSM461176 is single-end; GSM461177 and GSM461180 are paired-end.
+samples:
+  GSM461176:
+    layout: SE
+    fq1: data/test/zenodo_6457007/GSM461176_subsampled.fastqsanger
+  GSM461177:
+    layout: PE
+    fq1: data/test/zenodo_6457007/GSM461177_1_subsampled.fastqsanger
+    fq2: data/test/zenodo_6457007/GSM461177_2_subsampled.fastqsanger
+  GSM461180:
+    layout: PE
+    fq1: data/test/zenodo_6457007/GSM461180_1_subsampled.fastqsanger
+    fq2: data/test/zenodo_6457007/GSM461180_2_subsampled.fastqsanger
+
+reference:
+  # D. melanogaster BDGP6.46, Ensembl release 112
+  transcriptome_url: "https://ftp.ensembl.org/pub/release-112/fasta/drosophila_melanogaster/cdna/Drosophila_melanogaster.BDGP6.46.cdna.all.fa.gz"
+  genome_url: "https://ftp.ensembl.org/pub/release-112/fasta/drosophila_melanogaster/dna/Drosophila_melanogaster.BDGP6.46.dna.toplevel.fa.gz"
+  transcriptome_sha256: ""
+
+fastp:
+  min_length: 20
+  threads: 4
+
+salmon:
+  threads: 4
+
+fastqc:
+  threads: 2
+
+multiqc:
+  report_name: "report.html"

@@ -1,0 +1,34 @@
+results_dir: "results"
+resources_dir: "resources"
+
+# Fix 8: version-stamp so results are traceable to a specific reference release.
+# Change this key when upgrading the reference; old resources/ subdirs are kept.
+reference_version: "ensembl_112_scerevisiae"
+
+# Fix 3: each sample declares its own layout (PE/SE) and explicit FASTQ paths.
+# Add samples here; the Snakefile derives PE_SAMPLES / SE_SAMPLES automatically.
+samples:
+  SRR6357070:
+    layout: PE
+    fq1: data/test/SRR6357070_1.fastq.gz
+    fq2: data/test/SRR6357070_2.fastq.gz
+
+reference:
+  # S. cerevisiae R64-1-1, Ensembl release 112
+  transcriptome_url: "https://ftp.ensembl.org/pub/release-112/fasta/saccharomyces_cerevisiae/cdna/Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa.gz"
+  genome_url: "https://ftp.ensembl.org/pub/release-112/fasta/saccharomyces_cerevisiae/dna/Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa.gz"
+  # Fix 7: fill this after first download with: shasum -a 256 resources/.../transcriptome.fa.gz
+  transcriptome_sha256: ""
+
+fastp:
+  min_length: 20
+  threads: 4
+
+salmon:
+  threads: 4
+
+fastqc:
+  threads: 2
+
+multiqc:
+  report_name: "report.html"

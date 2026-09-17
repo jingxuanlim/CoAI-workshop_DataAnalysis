@@ -3,3 +3,13 @@ results/*
 __pycache__/
 *.pyc
 .selfcheck_figure.png
+.DS_Store
+
+# RNA-seq workflow
+resources/
+.snakemake/
+*.bam
+*.bai
+data/test/*.fastq.gz
+data/test/zenodo_6457007/
+results/trimmed/*.fastq.gz

@@ -67,6 +67,67 @@ Useful hand-out.
 
 ---
 
+## RNA-seq preprocessing workflow (FASTQ → counts)
+
+A Snakemake pipeline that takes paired-end FASTQ files and produces a
+gene-level count matrix at `results/counts_matrix.tsv`.
+
+**Tools:** FastQC · fastp · Salmon · pytximport · MultiQC
+
+**Setup**
+
+```bash
+conda env create -f environment.yml
+conda activate rnaseq-workflow
+```
+
+**Test data** (already in `data/test/`)
+
+One paired-end sample from the nf-core test dataset (GSE110004, *S. cerevisiae*):
+
+```
+data/test/SRR6357070_1.fastq.gz
+data/test/SRR6357070_2.fastq.gz
+```
+
+**Run**
+
+```bash
+# Dry-run to preview the DAG
+snakemake -n --configfile config.yaml
+
+# Full run (downloads reference on first execution)
+snakemake --cores 4 --configfile config.yaml
+```
+
+Always pass `--configfile` explicitly. Omitting it causes Snakemake to error
+(no default config is set), which is intentional — it prevents two config files
+from being silently merged if you switch datasets.
+
+Outputs:
+
+| Path | Contents |
+| ---- | -------- |
+| `results/fastqc/raw/` | FastQC reports on raw reads |
+| `results/fastqc/trimmed/` | FastQC reports post-trimming |
+| `results/trimmed/` | fastp-trimmed FASTQs + QC JSON |
+| `results/salmon/` | Per-sample Salmon quant directories |
+| `results/counts_matrix.tsv` | Gene × sample raw count matrix |
+| `results/multiqc/report.html` | Aggregated QC report |
+
+Edit `config.yaml` to add samples or swap the reference organism. To run on
+the Zenodo Drosophila test data use `--configfile config_zenodo.yaml`.
+
+**Notes**
+- `environment.yml` installs `snakemake-minimal`, which is sufficient for local
+  execution. For cluster or cloud execution (SLURM, AWS), replace it with the
+  full `snakemake` package.
+- Reference files are downloaded to `resources/<reference_version>/` on first
+  run and are gitignored. Populate `reference.transcriptome_sha256` in the
+  config after first download to enable integrity verification on subsequent runs.
+
+---
+
 ## Running things yourself
 
 ```
